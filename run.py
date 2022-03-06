@@ -3,6 +3,12 @@ import time
 ALPHABETS = ('abcdefghijklmnopqrstuvwxyz')
 
 
+# Sleep time delay function
+def print_with_sleep(msg, sleep_interval):
+    print(msg)
+    time.sleep(sleep_interval)
+
+    
 # Function asking for user to input their name
 # Validate that user inputs letters only
 def take_username_input():
