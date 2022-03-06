@@ -1,4 +1,6 @@
 import time
+from hang_man_pics import hangman_pic
+from words import select_word
 
 ALPHABETS = ('abcdefghijklmnopqrstuvwxyz')
 
