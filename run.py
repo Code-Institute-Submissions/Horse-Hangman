@@ -104,3 +104,5 @@ def run_game():
             print("Opps! You ran out of guesses, Hard Luck !!")
             print("The correct word was: ", word.capitalize())
             print("-------------------------------------------")
+# Initiate play_again function if user wishes to continue
+    play_again()
