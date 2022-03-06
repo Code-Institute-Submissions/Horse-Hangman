@@ -106,3 +106,9 @@ def run_game():
             print("-------------------------------------------")
 # Initiate play_again function if user wishes to continue
     play_again()
+
+
+# Function that shows the greeting asks for the user name and runs the game
+def start_game():
+    show_greeting_and_take_username()
+    run_game()
