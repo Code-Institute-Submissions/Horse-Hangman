@@ -14,3 +14,4 @@ def select_word():
 
     random_word = random.choice(words)
     return random_word.lower()
+    

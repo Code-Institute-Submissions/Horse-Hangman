@@ -1,5 +1,5 @@
 import time
-from hang_man_pics import hangman_pic
+from hangman_pics import hangman_pic
 from words import select_word
 
 ALPHABETS = ('abcdefghijklmnopqrstuvwxyz')
@@ -43,6 +43,7 @@ def play_again():
         run_game()
     else:
         print("Hope you enjoyed the game !. See you next time :)")
+
 
 # Define function to run the gamey
 def run_game():
