@@ -46,7 +46,7 @@ def show_greeting_and_take_username():
     print_with_sleep(Fore.BLUE + "Hint: All words are Equine related.", 1)
     print_with_sleep(Fore.MAGENTA + "Don't forget to press 'enter key' after each guess.", 1)
     print_with_sleep(Fore.MAGENTA + "Let the fun begin!", 1)
-    print(Fore.BLUE + "-------------------------------------------")
+    print_lines()
 
 
 def play_again():
@@ -77,37 +77,40 @@ def run_game():
     # Deduct attempts each user fails to guess incorrectly
     while sucessfully_guessed is not True and total_attempt_counter > 0:
         print()
-        print(Fore.GREEN + 'You have ' + str(total_attempt_counter) + ' attempts')
-        print()
+        print(Fore.GREEN + 'You have ' + str(total_attempt_counter) + ' guess attempts')
         guessed_letter = input(Fore.YELLOW + 'Guess a letter: \n').lower()
         # user inputs a letter
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
-                print(Fore.BLUE + "-------------------------------------------")
+                print_lines()
                 print(Fore.RED + 'You are yet to enter a letter') 
                 print(Fore.RED + 'Check your entry, make sure you enter a letter not a number or character')
+                print()
             elif guessed_letter in guessed_letters:
-                print(Fore.BLUE + "-------------------------------------------")
+                print_lines()
                 print(Fore.RED + 'You have already guessed that letter before.Try again!')
                 print()
             elif guessed_letter not in word:
-                print(Fore.BLUE + "-------------------------------------------")
+                print_lines()
                 print(Fore.RED + 'Sorry, that letter is not part of the word')
+                print()
                 guessed_letters.append(guessed_letter)
                 total_attempt_counter -= 1
                 wrong_guess += 1
                 hangman_pic(wrong_guess)
                 print()
             elif guessed_letter in word:
-                print(Fore.BLUE + "--------------------------------------------------------------------------")
+                print_lines()
                 print(Fore.GREEN + 'Super that letter is in the word')
+                print()
                 guessed_letters.append(guessed_letter)
                 hangman_pic(wrong_guess)
                 print()
         else:
             if guessed_letter.isalpha() is not True:
-                print(Fore.BLUE + "-------------------------------------------")
+                print_lines()
                 print(Fore.RED + 'You did not enter a letter ! Please enter a letter !')
+                print()
                 
             
         # print letter or dash under hangman pic
@@ -122,15 +125,15 @@ def run_game():
         if result == word:
             print()
             sucessfully_guessed = True
-            print(Fore.BLUE + "-------------------------------------------")
+            print_lines()
             print(Fore.GREEN + "Well Done you guessed the right word. You Won :)")
-            print(Fore.BLUE + "-------------------------------------------")
+            print_lines()
         elif total_attempt_counter == 0:
             print()
-            print(Fore.BLUE + "-------------------------------------------")
+            print_lines()
             print(Fore.RED + "Opps! You ran out of guesses, Hard Luck, You Loose !!")
             print(Fore.RED + "The correct word was: ", word.capitalize())
-            print(Fore.BLUE + "-------------------------------------------")
+            print_lines()
 # Initiate play_again function if user wishes to continue
     play_again()
 
