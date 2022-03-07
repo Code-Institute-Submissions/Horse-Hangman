@@ -2,9 +2,10 @@
 
 ## Overview
 
-[Embarr Equestrian Trivia Challenge- Deployed Site Link](https://chellej80.github.io/Embarr-Equestrian-Trivia/) is a 
+[Horse Hangman Deployed Site Link](https://horse-hangman.herokuapp.com/) is a python terminal game that runs on Heroku.
 
-The Quiz consists of ten shuffled questions that are presented with multiple choice question either two options or four options. When the user selects an answer, the correct one turns green and the wrong one turns red. The quiz result/score is incremented and on completion of the Quiz the user has the option to 'Try Again'.
+### How to Play
+The game is based on the traditional Hangman game, the only difference is that all the words for this game are related to horses. The user has six lives (attempts) they must guess a letter and if wrong the user looses a life and the hangman picture starts to build, on completion of the game the user has the option to 'Play Again'.
 
 <div><center><h2>
 Site Mockup
