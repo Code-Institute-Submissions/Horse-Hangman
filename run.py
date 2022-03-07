@@ -18,11 +18,11 @@ def print_with_sleep(msg, sleep_interval):
 # Function asking for user to input their name
 # Use a decision making process to accept only alphabets as name
 def take_username_input():
-    name = input("Enter your name: \n")
+    name = input(Fore.MAGENTA + "Enter your name: \n")
     if name.isalpha():
         return name.capitalize()
     else:
-        print('You did not enter a valid name ! Please enter your name using letter only: \n')
+        print(Fore.RED + 'You did not enter a valid name ! Please enter your name using letter only: \n')
         return take_username_input()
 
 
@@ -34,19 +34,21 @@ def show_greeting_and_take_username():
     name = take_username_input()
     print(Fore.BLUE + "-------------------------------------------")
     print_with_sleep(
+        Fore.YELLOW + 
         "Hello" + " " 
         + name + " " 
         + "let's start playing Hangman!", 1)
-    print_with_sleep("The objective of the game is to guess the secret word one letter at a time",1)
+    print()
+    print_with_sleep(Fore.MAGENTA + "The objective of the game is to guess the secret word one letter at a time",1)
     print_with_sleep(Fore.BLUE + "Hint: All words are Equine related.", 1)
-    print_with_sleep("Don't forget to press 'enter key' after each guess.", 1)
-    print_with_sleep("Let the fun begin!", 1)
-    print("-------------------------------------------")
+    print_with_sleep(Fore.MAGENTA + "Don't forget to press 'enter key' after each guess.", 1)
+    print_with_sleep(Fore.MAGENTA + "Let the fun begin!", 1)
+    print(Fore.BLUE + "-------------------------------------------")
 
 
 def play_again():
     """ This function asks user/player if he/she wishes to replay"""
-    response = input("Would you like to play again? yes/no. Enter 'Y' for Yes or 'N' for No: ").lower()
+    response = input(Fore.YELLOW + "Would you like to play again? yes/no. Enter 'Y' for Yes or 'N' for No: ").lower()
     # Create a decision making process
     if response == 'y':
         run_game()
@@ -72,33 +74,41 @@ def run_game():
     # Deduct attempts each user fails to guess incorrectly
     while sucessfully_guessed is not True and total_attempt_counter > 0:
         print()
-        print('You have ' + str(total_attempt_counter) + ' attempts')
+        print(Fore.GREEN + 'You have ' + str(total_attempt_counter) + ' attempts')
         print()
-        guessed_letter = input('Guess a letter: \n').lower()
-        
+        guessed_letter = input(Fore.YELLOW + 'Guess a letter: \n').lower()
         # user inputs a letter
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
-                print('You are yet to enter a letter. Check your entry, make sure you enter a letter not a number')
+                print(Fore.BLUE + "-------------------------------------------")
+                print(Fore.RED + 'You are yet to enter a letter. Check your entry, make sure you enter a letter not a number or character')
+                print(Fore.BLUE + "-------------------------------------------")
             elif guessed_letter in guessed_letters:
-                print('You have already guessed that letter before.Try again!')
+                print(Fore.BLUE + "-------------------------------------------")
+                print(Fore.RED + 'You have already guessed that letter before.Try again!')
+                print(Fore.BLUE + "-------------------------------------------")
                 print()
             elif guessed_letter not in word:
-                print()
-                print('Sorry, that letter is not part of the word')
+                print(Fore.BLUE + "-------------------------------------------")
+                print(Fore.RED + 'Sorry, that letter is not part of the word')
+                print(Fore.BLUE + "-------------------------------------------")
                 guessed_letters.append(guessed_letter)
                 total_attempt_counter -= 1
                 wrong_guess += 1
                 hangman_pic(wrong_guess)
                 print()
             elif guessed_letter in word:
-                print('Super that letter is in the word')
+                print(Fore.BLUE + "-------------------------------------------")
+                print(Fore.GREEN + 'Super that letter is in the word')
+                print(Fore.BLUE + "-------------------------------------------")
                 guessed_letters.append(guessed_letter)
                 hangman_pic(wrong_guess)
                 print()
         else:
             if guessed_letter.isalpha() is not True:
-                print('You did not enter a letter ! Please enter a letter !')
+                print(Fore.BLUE + "-------------------------------------------")
+                print(Fore.RED + 'You did not enter a letter ! Please enter a letter !')
+                print(Fore.BLUE + "-------------------------------------------")
             
         # print letter or dash under hangman pic
         result = ''
@@ -112,14 +122,15 @@ def run_game():
         if result == word:
             print()
             sucessfully_guessed = True
-            print("Well Done you guessed the right word. You Won :)")
-            print("-------------------------------------------")
+            print(Fore.BLUE + "-------------------------------------------")
+            print(Fore.GREEN + "Well Done you guessed the right word. You Won :)")
+            print(Fore.BLUE + "-------------------------------------------")
         elif total_attempt_counter == 0:
             print()
-            print("-------------------------------------------")
-            print("Opps! You ran out of guesses, Hard Luck, You Loose !!")
-            print("The correct word was: ", word.capitalize())
-            print("-------------------------------------------")
+            print(Fore.BLUE + "-------------------------------------------")
+            print(Fore.RED + "Opps! You ran out of guesses, Hard Luck, You Loose !!")
+            print(Fore.RED + "The correct word was: ", word.capitalize())
+            print(Fore.BLUE + "-------------------------------------------")
 # Initiate play_again function if user wishes to continue
     play_again()
 
