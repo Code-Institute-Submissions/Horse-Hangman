@@ -113,5 +113,6 @@ def start_game():
     show_greeting_and_take_username()
     run_game()
 
+
 # Full program run
 start_game()
