@@ -3,6 +3,7 @@ import os
 from hangman_pics import hangman_pic
 from words import select_word
 
+# Set alphabet as constant
 ALPHABETS = ('abcdefghijklmnopqrstuvwxyz')
 
 
@@ -64,13 +65,13 @@ def run_game():
     # Set inital guess to false
     sucessfully_guessed = False
     wrong_guess = 0
-    # Print an empty line
-    print()
     # Initate a while loop and create decisions
     # Also a create decisions for if user inputs a wrong entry
     # Deduct attempts each user fails to guess incorrectly
     while sucessfully_guessed is not True and total_attempt_counter > 0:
+        print()
         print('You have ' + str(total_attempt_counter) + ' attempts')
+        print()
         guessed_letter = input('Guess a letter: \n').lower()
         
         # user inputs a letter
@@ -79,16 +80,20 @@ def run_game():
                 print('You are yet to enter a letter. Check your entry, make sure you enter a letter not a number')
             elif guessed_letter in guessed_letters:
                 print('You have already guessed that letter before.Try again!')
+                print()
             elif guessed_letter not in word:
+                print()
                 print('Sorry, that letter is not part of the word')
                 guessed_letters.append(guessed_letter)
                 total_attempt_counter -= 1
                 wrong_guess += 1
                 hangman_pic(wrong_guess)
+                print()
             elif guessed_letter in word:
                 print('Super that letter is in the word')
                 guessed_letters.append(guessed_letter)
                 hangman_pic(wrong_guess)
+                print()
         else:
             if guessed_letter.isalpha() is not True:
                 print('You did not enter a letter ! Please enter a letter !')
@@ -105,12 +110,12 @@ def run_game():
         if result == word:
             print()
             sucessfully_guessed = True
-            print("Well Done you guessed the right word :)")
+            print("Well Done you guessed the right word. You Won :)")
             print("-------------------------------------------")
         elif total_attempt_counter == 0:
             print()
             print("-------------------------------------------")
-            print("Opps! You ran out of guesses, Hard Luck !!")
+            print("Opps! You ran out of guesses, Hard Luck, You Loose !!")
             print("The correct word was: ", word.capitalize())
             print("-------------------------------------------")
 # Initiate play_again function if user wishes to continue
