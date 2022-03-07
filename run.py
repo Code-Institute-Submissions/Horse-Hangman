@@ -9,6 +9,9 @@ init(autoreset=True)
 ALPHABETS = ('abcdefghijklmnopqrstuvwxyz')
 
 
+def print_lines():
+    print(Fore.BLUE + "--------------------------------------------------------------------------")
+
 # Sleep time delay function
 def print_with_sleep(msg, sleep_interval):
     print(msg)
@@ -28,11 +31,11 @@ def take_username_input():
 
 # Statements welcoming the user and asking for them to input their name
 def show_greeting_and_take_username():
-    print(Fore.BLUE + "-------------------------------------------")
+    print_lines()
     print(Fore.MAGENTA + "Welcome to Horse Hangman")
-    print(Fore.BLUE + "-------------------------------------------")
+    print_lines()
     name = take_username_input()
-    print(Fore.BLUE + "-------------------------------------------")
+    print_lines()
     print_with_sleep(
         Fore.YELLOW + 
         "Hello" + " " 
@@ -81,26 +84,23 @@ def run_game():
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
                 print(Fore.BLUE + "-------------------------------------------")
-                print(Fore.RED + 'You are yet to enter a letter. Check your entry, make sure you enter a letter not a number or character')
-                print(Fore.BLUE + "-------------------------------------------")
+                print(Fore.RED + 'You are yet to enter a letter') 
+                print(Fore.RED + 'Check your entry, make sure you enter a letter not a number or character')
             elif guessed_letter in guessed_letters:
                 print(Fore.BLUE + "-------------------------------------------")
                 print(Fore.RED + 'You have already guessed that letter before.Try again!')
-                print(Fore.BLUE + "-------------------------------------------")
                 print()
             elif guessed_letter not in word:
                 print(Fore.BLUE + "-------------------------------------------")
                 print(Fore.RED + 'Sorry, that letter is not part of the word')
-                print(Fore.BLUE + "-------------------------------------------")
                 guessed_letters.append(guessed_letter)
                 total_attempt_counter -= 1
                 wrong_guess += 1
                 hangman_pic(wrong_guess)
                 print()
             elif guessed_letter in word:
-                print(Fore.BLUE + "-------------------------------------------")
+                print(Fore.BLUE + "--------------------------------------------------------------------------")
                 print(Fore.GREEN + 'Super that letter is in the word')
-                print(Fore.BLUE + "-------------------------------------------")
                 guessed_letters.append(guessed_letter)
                 hangman_pic(wrong_guess)
                 print()
@@ -108,7 +108,7 @@ def run_game():
             if guessed_letter.isalpha() is not True:
                 print(Fore.BLUE + "-------------------------------------------")
                 print(Fore.RED + 'You did not enter a letter ! Please enter a letter !')
-                print(Fore.BLUE + "-------------------------------------------")
+                
             
         # print letter or dash under hangman pic
         result = ''
