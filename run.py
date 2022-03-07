@@ -38,28 +38,32 @@ def show_greeting_and_take_username():
     print_lines()
     print_with_sleep(
         Fore.YELLOW + 
-        "Hello" + " " 
+        "Hello & welcome" + " " 
         + name + " " 
-        + "let's start playing Hangman!", 1)
+        + "please wait for the rules to load.....", 1)
     print()
     print_with_sleep(Fore.MAGENTA + "The objective of the game is to guess the secret word one letter at a time",1)
     print_with_sleep(Fore.BLUE + "Hint: All words are Equine related.", 1)
     print_with_sleep(Fore.MAGENTA + "Don't forget to press 'enter key' after each guess.", 1)
-    print_with_sleep(Fore.MAGENTA + "Let the fun begin!", 1)
+    print_with_sleep(Fore.MAGENTA + "Lets start playing Horse Hangman!", 1)
     print_lines()
 
 
 def play_again():
     """ This function asks user/player if he/she wishes to replay"""
     response = input(Fore.YELLOW + "Would you like to play again? yes/no. Enter 'Y' for Yes or 'N' for No: ").lower()
+    print_lines()
     # Create a decision making process
     if response == 'y':
         run_game()
     else:
         os.system("clear")
         print("")
-        print(Fore.MAGENTA + "Hope you enjoyed the game !. See you next time :)")
+        print(Fore.MAGENTA + "Hope you enjoyed the game, See you next time :)")
 
+
+# print letter or dash under hangman pic
+    
 
 # Define function to run the gamey
 def run_game():
@@ -77,14 +81,14 @@ def run_game():
     # Deduct attempts each user fails to guess incorrectly
     while sucessfully_guessed is not True and total_attempt_counter > 0:
         print()
-        print(Fore.GREEN + 'You have ' + str(total_attempt_counter) + ' guess attempts')
+        print(Fore.GREEN + 'You have ' + str(total_attempt_counter) + ' guess attempts...')
         guessed_letter = input(Fore.YELLOW + 'Guess a letter: \n').lower()
         # user inputs a letter
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
                 print_lines()
-                print(Fore.RED + 'You are yet to enter a letter') 
-                print(Fore.RED + 'Check your entry, make sure you enter a letter not a number or character')
+                print(Fore.RED + 'You are yet to enter a letter, check your entry,') 
+                print(Fore.RED + 'please enter a letter not a number or character')
                 print()
             elif guessed_letter in guessed_letters:
                 print_lines()
@@ -112,8 +116,6 @@ def run_game():
                 print(Fore.RED + 'You did not enter a letter ! Please enter a letter !')
                 print()
                 
-            
-        # print letter or dash under hangman pic
         result = ''
         if sucessfully_guessed is not True:
             for letter in word:
@@ -121,7 +123,7 @@ def run_game():
                     result += letter
                 else:
                     result += '_'
-            print(result.capitalize())
+            print(" ".join(result.capitalize()))
         if result == word:
             print()
             sucessfully_guessed = True
@@ -131,13 +133,13 @@ def run_game():
         elif total_attempt_counter == 0:
             print()
             print_lines()
-            print(Fore.RED + "Opps! You ran out of guesses, Hard Luck, You Loose !!")
+            print(Fore.RED + "Opps! You ran out of guesses, Hard Luck, You Lose !!")
             print(Fore.RED + "The correct word was: ", word.capitalize())
             print_lines()
 # Initiate play_again function if user wishes to continue
     play_again()
 
-
+      
 # Function that shows the greeting asks for the user name and runs the game
 def start_game():
     show_greeting_and_take_username()
