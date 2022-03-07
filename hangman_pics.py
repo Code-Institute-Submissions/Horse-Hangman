@@ -1,9 +1,15 @@
+"""
+Hangman game ascii artwork
+"""
+# import colorama to give pictures the traffic light colours
 from colorama import Fore, init
 init(autoreset=True)
 
 
-# Function to hold the Hangman design, passing in wrong as an argument
 def hangman_pic(wrong):
+    """
+    Function to hold the Hangman design, passing in wrong as an argument
+    """
     if wrong == 0:
         print(Fore.GREEN + "\n+---+")
         print(Fore.GREEN + "    |")

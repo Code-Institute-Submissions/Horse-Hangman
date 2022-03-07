@@ -1,8 +1,12 @@
+"""
+Main python code for running the Horse Hangman game
+"""
 import time
 import os
+from colorama import Fore, init
 from hangman_pics import hangman_pic
 from words import select_word
-from colorama import Fore, init
+
 init(autoreset=True)
 
 # Set alphabet as constant
@@ -10,17 +14,25 @@ ALPHABETS = ('abcdefghijklmnopqrstuvwxyz')
 
 
 def print_lines():
+    """
+    Function to print the lines for the formatting
+    """
     print(Fore.BLUE + "--------------------------------------------------------------------------")
 
-# Sleep time delay function
+
 def print_with_sleep(msg, sleep_interval):
+    """
+    Sleep time function
+    """
     print(msg)
     time.sleep(sleep_interval)
 
 
-# Function asking for user to input their name
-# Use a decision making process to accept only alphabets as name
 def take_username_input():
+    """
+    Function asking for user to input their name
+      Use a decision making process to accept only alphabets as name
+    """
     name = input(Fore.MAGENTA + "Enter your name: \n")
     if name.isalpha():
         return name.capitalize()
@@ -29,20 +41,18 @@ def take_username_input():
         return take_username_input()
 
 
-# Statements welcoming the user and asking for them to input their name
 def show_greeting_and_take_username():
+    """
+    Statements welcoming the user and asking for them to input their name
+    """
     print_lines()
     print(Fore.YELLOW + "Welcome to Horse Hangman")
     print_lines()
     name = take_username_input()
     print_lines()
-    print_with_sleep(
-        Fore.YELLOW + 
-        "Hello & welcome" + " " 
-        + name + " " 
-        + "please wait for the rules to load.....", 1)
+    print_with_sleep(Fore.YELLOW + "Hello & welcome" + " " + name + " " + "please wait for the rules to load.....", 1)
     print()
-    print_with_sleep(Fore.CYAN + "The objective of the game is to guess the secret word one letter at a time",1)
+    print_with_sleep(Fore.CYAN + "The objective of the game is to guess the secret word one letter at a time", 1)
     print_with_sleep(Fore.BLUE + "Hint: All words are Equine related.", 1)
     print_with_sleep(Fore.CYAN + "Don't forget to press 'enter key' after each guess.", 1)
     print_with_sleep(Fore.CYAN + "Lets start playing Horse Hangman!", 1)
@@ -64,11 +74,10 @@ def play_again():
         print_lines()
 
 
-# print letter or dash under hangman pic
-    
-
-# Define function to run the gamey
 def run_game():
+    """
+    Define the main function that runs the game
+    """
     # Set guess word to get_word function for a random word to be generated
     word = select_word()
     # Initiate an empty list for guessed letter
@@ -89,7 +98,7 @@ def run_game():
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
                 print_lines()
-                print(Fore.RED + 'You are yet to enter a letter, check your entry,') 
+                print(Fore.RED + 'You are yet to enter a letter, check your entry,')
                 print(Fore.RED + 'please enter a letter not a number or character')
                 print()
             elif guessed_letter in guessed_letters:
@@ -114,10 +123,9 @@ def run_game():
                 print()
         else:
             if len(guessed_letter) != 1:
-                print_lines() 
-                print( Fore.RED + "Oops Please enter a letter and only one letter")
+                print_lines()
+                print(Fore.RED + "Oops Please enter a letter and only one letter")
                 print()
-                            
         result = ''
         if sucessfully_guessed is not True:
             for letter in word:
@@ -141,9 +149,11 @@ def run_game():
 # Initiate play_again function if user wishes to continue
     play_again()
 
-      
-# Function that shows the greeting asks for the user name and runs the game
+
 def start_game():
+    """
+    Function that shows the greeting asks for the user name and runs the game
+    """
     show_greeting_and_take_username()
     run_game()
 
