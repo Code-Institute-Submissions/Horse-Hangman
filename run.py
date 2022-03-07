@@ -76,7 +76,7 @@ def run_game():
         # user inputs a letter
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
-                print('You are yet to enter a letter. Check your entry, make sure you enter an alphabet not a number')
+                print('You are yet to enter a letter. Check your entry, make sure you enter a letter not a number')
             elif guessed_letter in guessed_letters:
                 print('You have already guessed that letter before.Try again!')
             elif guessed_letter not in word:
@@ -91,7 +91,8 @@ def run_game():
                 # nattempt_counter -=1
                 hangman_pic(wrong_guess)
         else:
-            print('You did not enter a letter ! Please enter a letter')
+            if guessed_letter.isalpha() is not True:
+                print('You did not enter a letter ! Please enter a letter !')
             # total_attempt_counter -= 1
         # print letter or dash under hangman pic
         result = ''
