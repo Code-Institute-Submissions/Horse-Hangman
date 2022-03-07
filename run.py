@@ -52,7 +52,7 @@ def play_again():
         print("")
         print("Hope you enjoyed the game !. See you next time :)")
 
-  
+
 # Define function to run the gamey
 def run_game():
     # Set guess word to get_word function for a random word to be generated
@@ -88,12 +88,11 @@ def run_game():
             elif guessed_letter in word:
                 print('Super that letter is in the word')
                 guessed_letters.append(guessed_letter)
-                # nattempt_counter -=1
                 hangman_pic(wrong_guess)
         else:
             if guessed_letter.isalpha() is not True:
                 print('You did not enter a letter ! Please enter a letter !')
-            # total_attempt_counter -= 1
+            
         # print letter or dash under hangman pic
         result = ''
         if sucessfully_guessed is not True:
