@@ -115,13 +115,9 @@ def run_game():
         else:
             if len(guessed_letter) != 1:
                 print_lines() 
-                print( Fore.RED +"Please guess only one letter.")
+                print( Fore.RED + "Oops Please enter a letter and only one letter")
                 print()
-            elif guessed_letter.isalpha() is not True: 
-                print_lines()
-                print(Fore.RED + 'You did not enter a letter ! Please enter a letter :)')
-                print()
-                
+                            
         result = ''
         if sucessfully_guessed is not True:
             for letter in word:
