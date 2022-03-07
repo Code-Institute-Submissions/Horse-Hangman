@@ -29,8 +29,11 @@ def show_greeting_and_take_username():
     print("-------------------------------------------")
     name = take_username_input()
     print("-------------------------------------------")
-    print_with_sleep("Hello" + " " + name + " " + "let's start playing Hangman!", 1)
-    print_with_sleep("The objective of the game is to guess the secret word one letter at a time", 1)
+    print_with_sleep(
+        "Hello" + " " 
+        + name + " " 
+        + "let's start playing Hangman!", 1)
+    print_with_sleep("The objective of the game is to guess the secret word one letter at a time",1)
     print_with_sleep("Don't forget to press 'enter key' after each guess.", 2)
     print_with_sleep("Let the fun begin!", 1)
 
@@ -64,6 +67,7 @@ def run_game():
     while sucessfully_guessed is not True and total_attempt_counter > 0:
         print('You have ' + str(total_attempt_counter) + ' attempts')
         guessed_letter = input('Guess a letter: \n').lower()
+        
         # user inputs a letter
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
@@ -82,8 +86,8 @@ def run_game():
                 # nattempt_counter -=1
                 hangman_pic(wrong_guess)
         else:
-            print('Please enter only one Letter per try')
-            total_attempt_counter -= 1
+            print('You did not enter a letter ! Please enter a letter')
+            # total_attempt_counter -= 1
         # print letter or dash under hangman pic
         result = ''
         if sucessfully_guessed is not True:
