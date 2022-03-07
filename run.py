@@ -2,6 +2,8 @@ import time
 import os
 from hangman_pics import hangman_pic
 from words import select_word
+from colorama import Fore, init
+init(autoreset=True)
 
 # Set alphabet as constant
 ALPHABETS = ('abcdefghijklmnopqrstuvwxyz')
@@ -26,17 +28,17 @@ def take_username_input():
 
 # Statements welcoming the user and asking for them to input their name
 def show_greeting_and_take_username():
-    print("-------------------------------------------")
-    print("Welcome to Horsey Hangman")
-    print("-------------------------------------------")
+    print(Fore.BLUE + "-------------------------------------------")
+    print(Fore.MAGENTA + "Welcome to Horse Hangman")
+    print(Fore.BLUE + "-------------------------------------------")
     name = take_username_input()
-    print("-------------------------------------------")
+    print(Fore.BLUE + "-------------------------------------------")
     print_with_sleep(
         "Hello" + " " 
         + name + " " 
         + "let's start playing Hangman!", 1)
     print_with_sleep("The objective of the game is to guess the secret word one letter at a time",1)
-    print_with_sleep("Hint: All words are Equine related.", 1)
+    print_with_sleep(Fore.BLUE + "Hint: All words are Equine related.", 1)
     print_with_sleep("Don't forget to press 'enter key' after each guess.", 1)
     print_with_sleep("Let the fun begin!", 1)
     print("-------------------------------------------")
@@ -51,7 +53,7 @@ def play_again():
     else:
         os.system("clear")
         print("")
-        print("Hope you enjoyed the game !. See you next time :)")
+        print(Fore.MAGENTA + "Hope you enjoyed the game !. See you next time :)")
 
 
 # Define function to run the gamey
