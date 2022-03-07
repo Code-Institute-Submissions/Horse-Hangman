@@ -59,7 +59,9 @@ def play_again():
     else:
         os.system("clear")
         print("")
-        print(Fore.MAGENTA + "Hope you enjoyed the game, See you next time :)")
+        print_lines()
+        print(Fore.CYAN + "Hope you enjoyed the game, See you next time :)")
+        print_lines()
 
 
 # print letter or dash under hangman pic
