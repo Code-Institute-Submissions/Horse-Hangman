@@ -32,7 +32,7 @@ def take_username_input():
 # Statements welcoming the user and asking for them to input their name
 def show_greeting_and_take_username():
     print_lines()
-    print(Fore.MAGENTA + "Welcome to Horse Hangman")
+    print(Fore.YELLOW + "Welcome to Horse Hangman")
     print_lines()
     name = take_username_input()
     print_lines()
@@ -42,10 +42,10 @@ def show_greeting_and_take_username():
         + name + " " 
         + "please wait for the rules to load.....", 1)
     print()
-    print_with_sleep(Fore.MAGENTA + "The objective of the game is to guess the secret word one letter at a time",1)
+    print_with_sleep(Fore.YELLOW + "The objective of the game is to guess the secret word one letter at a time",1)
     print_with_sleep(Fore.BLUE + "Hint: All words are Equine related.", 1)
-    print_with_sleep(Fore.MAGENTA + "Don't forget to press 'enter key' after each guess.", 1)
-    print_with_sleep(Fore.MAGENTA + "Lets start playing Horse Hangman!", 1)
+    print_with_sleep(Fore.YELLOW + "Don't forget to press 'enter key' after each guess.", 1)
+    print_with_sleep(Fore.YELLOW + "Lets start playing Horse Hangman!", 1)
     print_lines()
 
 
