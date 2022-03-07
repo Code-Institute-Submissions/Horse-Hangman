@@ -1,4 +1,5 @@
 import time
+import os
 from hangman_pics import hangman_pic
 from words import select_word
 
@@ -18,7 +19,7 @@ def take_username_input():
     if name.isalpha():
         return name.capitalize()
     else:
-        print('Please enter your name using letter only: \n')
+        print('You did not enter a valid name ! Please enter your name using letter only: \n')
         return take_username_input()
 
 
@@ -34,8 +35,10 @@ def show_greeting_and_take_username():
         + name + " " 
         + "let's start playing Hangman!", 1)
     print_with_sleep("The objective of the game is to guess the secret word one letter at a time",1)
-    print_with_sleep("Don't forget to press 'enter key' after each guess.", 2)
+    print_with_sleep("Hint: All words are Equine related.", 1)
+    print_with_sleep("Don't forget to press 'enter key' after each guess.", 1)
     print_with_sleep("Let the fun begin!", 1)
+    print("-------------------------------------------")
 
 
 def play_again():
@@ -45,9 +48,11 @@ def play_again():
     if response == 'y':
         run_game()
     else:
+        os.system("clear")
+        print("")
         print("Hope you enjoyed the game !. See you next time :)")
 
-
+  
 # Define function to run the gamey
 def run_game():
     # Set guess word to get_word function for a random word to be generated
