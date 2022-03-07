@@ -1,3 +1,6 @@
+"""
+This file contains the words that are randomly called in the main run.py file
+"""
 import random
 
 

@@ -92,8 +92,8 @@ def run_game():
     # Deduct attempts each user fails to guess incorrectly
     while sucessfully_guessed is not True and total_attempt_counter > 0:
         print()
-        print(Fore.GREEN + 'You have ' + str(total_attempt_counter) + ' guess attempts...')
-        guessed_letter = input(Fore.GREEN + 'Guess a letter: \n').lower()
+        print(Fore.BLUE + 'You have ' + str(total_attempt_counter) + ' guess attempts...')
+        guessed_letter = input(Fore.BLUE + 'Guess a letter: \n').lower()
         # user inputs a letter
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
@@ -133,7 +133,7 @@ def run_game():
                     result += letter
                 else:
                     result += '_'
-            print(Fore.GREEN + " ".join(result.capitalize()))
+            print(Fore.BLUE + " ".join(result.capitalize()))
         if result == word:
             print()
             sucessfully_guessed = True
