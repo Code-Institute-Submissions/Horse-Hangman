@@ -42,10 +42,10 @@ def show_greeting_and_take_username():
         + name + " " 
         + "please wait for the rules to load.....", 1)
     print()
-    print_with_sleep(Fore.YELLOW + "The objective of the game is to guess the secret word one letter at a time",1)
+    print_with_sleep(Fore.CYAN + "The objective of the game is to guess the secret word one letter at a time",1)
     print_with_sleep(Fore.BLUE + "Hint: All words are Equine related.", 1)
-    print_with_sleep(Fore.YELLOW + "Don't forget to press 'enter key' after each guess.", 1)
-    print_with_sleep(Fore.YELLOW + "Lets start playing Horse Hangman!", 1)
+    print_with_sleep(Fore.CYAN + "Don't forget to press 'enter key' after each guess.", 1)
+    print_with_sleep(Fore.CYAN + "Lets start playing Horse Hangman!", 1)
     print_lines()
 
 
@@ -82,7 +82,7 @@ def run_game():
     while sucessfully_guessed is not True and total_attempt_counter > 0:
         print()
         print(Fore.GREEN + 'You have ' + str(total_attempt_counter) + ' guess attempts...')
-        guessed_letter = input(Fore.YELLOW + 'Guess a letter: \n').lower()
+        guessed_letter = input(Fore.GREEN + 'Guess a letter: \n').lower()
         # user inputs a letter
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
@@ -92,7 +92,7 @@ def run_game():
                 print()
             elif guessed_letter in guessed_letters:
                 print_lines()
-                print(Fore.RED + 'You have already guessed that letter before.Try again!')
+                print(Fore.RED + 'You have already guessed that letter before.Try again')
                 print()
             elif guessed_letter not in word:
                 print_lines()
@@ -111,9 +111,13 @@ def run_game():
                 hangman_pic(wrong_guess)
                 print()
         else:
-            if guessed_letter.isalpha() is not True:
+            if len(guessed_letter) != 1:
+                print_lines() 
+                print( Fore.RED +"Please guess only one letter.")
+                print()
+            elif guessed_letter.isalpha() is not True: 
                 print_lines()
-                print(Fore.RED + 'You did not enter a letter ! Please enter a letter !')
+                print(Fore.RED + 'You did not enter a letter ! Please enter a letter :)')
                 print()
                 
         result = ''
@@ -128,7 +132,7 @@ def run_game():
             print()
             sucessfully_guessed = True
             print_lines()
-            print(Fore.GREEN + "Well Done you guessed the right word. You Won :)")
+            print(Fore.GREEN + "Well Done you won you guessed the right word: ", word.capitalize())
             print_lines()
         elif total_attempt_counter == 0:
             print()
