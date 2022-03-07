@@ -123,7 +123,7 @@ def run_game():
                     result += letter
                 else:
                     result += '_'
-            print(" ".join(result.capitalize()))
+            print(Fore.GREEN + " ".join(result.capitalize()))
         if result == word:
             print()
             sucessfully_guessed = True
