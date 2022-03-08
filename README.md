@@ -160,6 +160,12 @@ Test Scripts actioned:
 
 3. Test that the user name is loaded and the rules display with the time delay
 
+  Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter a valid name 
+  - Check that the user name is then printed to the terminal in the next statment
+  - Test Passed 
+  
 4. Test that the User can enter a letter and return a result
 
   - Navigate to Heroku deployed link
@@ -245,8 +251,8 @@ The conclusion of repeating the above test scripts multiple times was that:
 - The random select word logic is working as expected.
 - The game handles invalid data entry correctly.
 - The guess counters are being incremented correcly.
-- The game only actions the play again function once all guess attempts or when the word has been guessed corectly.
-- answered.
+- The game only actions the play again function once all guess attempts or when the word has been guessed correctly.
+- The hangman picture displays as expected when a letter is guessed wrong or right.
 
 
 ### Bugs
