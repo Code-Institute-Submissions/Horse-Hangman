@@ -80,15 +80,23 @@ I ran the Python Code through [PEP8](http://pep8online.com/)
 
 No errors detected
 
-I ran the code through .
-
-
 ## Credits
 
 ### Python:
 
 Code inspired and adapted from the following tutorials and sources:
-- 
+- https://www.pythonforbeginners.com/code-snippets-source-code/game-hangman
+
+- https://inventwithpython.com/invent4thed/chapter8.html
+
+- https://www.w3schools.com/python/default.asp
+
+- https://www.youtube.com/watch?v=pFvSb7cb_Us
+
+- https://www.mikedane.com/programming-languages/python/guessing-game/
+
+- https://www.numpyninja.com/post/how-to-format-strings-using-print-in-python
+
 And of course the Code Institute Javascript online module & challenges/ Love Sandwiches
 
 

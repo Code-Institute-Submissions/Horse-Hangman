@@ -17,7 +17,7 @@ def print_lines():
     """
     Function to print the lines for the formatting
     """
-    print(Fore.BLUE + "--------------------------------------------------------------------------")
+    print(Fore.BLUE + "------------------------------------------------------")
 
 
 def print_with_sleep(msg, sleep_interval):
@@ -37,7 +37,8 @@ def take_username_input():
     if name.isalpha():
         return name.capitalize()
     else:
-        print(Fore.RED + 'You did not enter a valid name ! Please enter your name using letter only: \n')
+        print(Fore.RED + 'You did not enter a valid name')
+        print(Fore.RED + 'Please enter your name using letter only: \n')
         return take_username_input()
 
 
@@ -50,18 +51,23 @@ def show_greeting_and_take_username():
     print_lines()
     name = take_username_input()
     print_lines()
-    print_with_sleep(Fore.YELLOW + "Hello & welcome" + " " + name + " " + "please wait for the rules to load.....", 1)
+    print_with_sleep(Fore.YELLOW + "Hello & welcome" + " " + name + " ", 1)
+    print_with_sleep(Fore.YELLOW + "please wait for the rules to load.....", 1)
     print()
-    print_with_sleep(Fore.CYAN + "The objective of the game is to guess the secret word one letter at a time", 1)
+    print_with_sleep(Fore.CYAN + "The objective of the game is to guess\
+ the secret word one letter at a time", 1)
     print_with_sleep(Fore.BLUE + "Hint: All words are Equine related.", 1)
-    print_with_sleep(Fore.CYAN + "Don't forget to press 'enter key' after each guess.", 1)
+    print_with_sleep(Fore.CYAN + "Don't forget to press \
+ 'enter key' after each guess", 1)
     print_with_sleep(Fore.CYAN + "Lets start playing Horse Hangman!", 1)
     print_lines()
 
 
 def play_again():
     """ This function asks user/player if he/she wishes to replay"""
-    response = input(Fore.YELLOW + "Would you like to play again? yes/no. Enter 'Y' for Yes or 'N' for No: ").lower()
+    response = input(
+        Fore.YELLOW + "Would you like to play again?\
+ Enter 'Y' for Yes or 'N' for No: ").lower()
     print_lines()
     # Create a decision making process
     if response == 'y':
@@ -92,18 +98,20 @@ def run_game():
     # Deduct attempts each user fails to guess incorrectly
     while sucessfully_guessed is not True and total_attempt_counter > 0:
         print()
-        print(Fore.BLUE + 'You have ' + str(total_attempt_counter) + ' guess attempts...')
+        print(Fore.BLUE + 'You have ' + str(total_attempt_counter) + ' \
+ guess attempts...')
         guessed_letter = input(Fore.BLUE + 'Guess a letter: \n').lower()
         # user inputs a letter
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
                 print_lines()
-                print(Fore.RED + 'You are yet to enter a letter, check your entry,')
-                print(Fore.RED + 'please enter a letter not a number or character')
+                print(Fore.RED + 'You are yet to enter a letter, \
+ check your entry')
+                print(Fore.RED + 'Please only enter a letter')
                 print()
             elif guessed_letter in guessed_letters:
                 print_lines()
-                print(Fore.RED + 'You have already guessed that letter before.Try again')
+                print(Fore.RED + 'You have already guessed that letter before')
                 print()
             elif guessed_letter not in word:
                 print_lines()
@@ -124,7 +132,7 @@ def run_game():
         else:
             if len(guessed_letter) != 1:
                 print_lines()
-                print(Fore.RED + "Oops Please enter a letter and only one letter")
+                print(Fore.RED + "Oops Please enter a letter")
                 print()
         result = ''
         if sucessfully_guessed is not True:
@@ -133,17 +141,19 @@ def run_game():
                     result += letter
                 else:
                     result += '_'
-            print(Fore.BLUE + " ".join(result.capitalize()))
+            print(Fore.CYAN + " ".join(result.capitalize()))
         if result == word:
             print()
             sucessfully_guessed = True
             print_lines()
-            print(Fore.GREEN + "Well Done you won you guessed the right word: ", word.capitalize())
+            print(Fore.GREEN + "Well Done :) You Won !!!")
+            print(Fore.GREEN + "The right word is: ", word.capitalize())
             print_lines()
         elif total_attempt_counter == 0:
             print()
             print_lines()
-            print(Fore.RED + "Opps! You ran out of guesses, Hard Luck, You Lose !!")
+            print(Fore.RED + "Opps! You ran out of guesses, \
+ Hard Luck, You Lose !!")
             print(Fore.RED + "The correct word was: ", word.capitalize())
             print_lines()
 # Initiate play_again function if user wishes to continue
