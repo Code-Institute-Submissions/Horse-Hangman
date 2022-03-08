@@ -80,6 +80,7 @@ def play_again():
         print_lines()
     else:
         os.system("clear")
+        start_game()
 
 
 def run_game():
