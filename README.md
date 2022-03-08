@@ -269,7 +269,7 @@ The conclusion of repeating the above test scripts multiple times was that:
 ### Content 
 
 I reviewed all content on the site for:
-- grammar and spelling mistakes
+- Grammar and spelling mistakes
 - Hangman pictures are placed properly with proper sizes & displaying as expected
 - Instructions are clear and contain correct information
 - Verified all text/ headings are displaying correctly
@@ -287,7 +287,7 @@ No errors detected
 ### words.py:
 <img src=images/Words.jpg>
 
-### hangman_pics.py:
+### constants.py:
 <img src=images/Hangman_pic.jpg>
 
 
