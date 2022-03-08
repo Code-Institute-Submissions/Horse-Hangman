@@ -188,6 +188,7 @@ Test Scripts actioned:
 11. Test that the colours are displaying as expected
 
 
+
 The conclusion of repeating the above test scripts multiple times was that:
 
 - The game itself was understandable and easy to follow.
@@ -200,10 +201,10 @@ The conclusion of repeating the above test scripts multiple times was that:
 
 ### Bugs
 
-- Hangman pic build backwards
-- Return key
-- multiple letters entered
-- play again - any letter will exit the game 
+- In my initial testing the Hangman picture was building backwards, I fixed this by updating the code with a wrong_guess counter 
+- In initial testing the user could run through the game to the end without input by hitting the Return key, I fixed this by updating the else statment in the run game method to catch and invalidate this action.
+- In initial testing the user could enter multiple letters without any feedback/ error, I fixed this by updating the else statment in the run game method to catch and invalidate this action. 
+- In the play again function it initially asked for Y/N howwever selecting any key other than Y will exit the game.
 
 ### Content 
 
