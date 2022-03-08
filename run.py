@@ -67,7 +67,7 @@ def play_again():
     """ This function asks user/player if he/she wishes to replay"""
     response = input(
         Fore.YELLOW + "Would you like to play again?\
- Enter 'Y' for Yes or 'N' for No: ").lower()
+ Enter 'Y' for Yes or any key for No: ").lower()
     print_lines()
     # Create a decision making process
     if response == 'y':
