@@ -78,7 +78,9 @@ def play_again():
         print_lines()
         print(Fore.CYAN + "Hope you enjoyed the game, See you next time :)")
         print_lines()
-    
+    else:
+        os.system("clear")
+
 
 def run_game():
     """
