@@ -112,6 +112,7 @@ Enter return instead of a letter:
 - Improve Game display
 - Add logo/ improve art work
 - Add multiple game levels e.g Easy, Moderate, Hard
+- Improve formatting of the game in the terminal display
        
 
 ## Languages Used
@@ -165,7 +166,7 @@ Test Scripts actioned:
   - Enter a valid name 
   - Check that the user name is then printed to the terminal in the next statment
   - Test Passed 
-  
+
 4. Test that the User can enter a letter and return a result
 
   - Navigate to Heroku deployed link
