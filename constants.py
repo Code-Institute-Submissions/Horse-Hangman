@@ -5,8 +5,14 @@ Hangman game ascii artwork
 from colorama import Fore, init
 init(autoreset=True)
 
+# Set limit of user attempts to guess 
+TOTAL_ATTEMPTS = 6
 
-def hangman_pic(wrong):
+# Set alphabet as constant
+ALPHABETS = ('abcdefghijklmnopqrstuvwxyz')
+
+
+def hangman_status(wrong):
     """
     Function to hold the Hangman design, passing in wrong as an argument
     """

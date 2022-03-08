@@ -4,13 +4,10 @@ Main python code for running the Horse Hangman game
 import time
 import os
 from colorama import Fore, init
-from hangman_pics import hangman_pic
+from constants import hangman_status, TOTAL_ATTEMPTS, ALPHABETS
 from words import select_word
 
 init(autoreset=True)
-
-# Set alphabet as constant
-ALPHABETS = ('abcdefghijklmnopqrstuvwxyz')
 
 
 def print_lines():
@@ -91,7 +88,7 @@ def run_game():
     # Initiate an empty list for guessed letter
     guessed_letters = []
     # Initiate a counter for number of tries by the user
-    total_attempt_counter = 6
+    total_attempt_counter = TOTAL_ATTEMPTS
     # Set inital guess to false
     sucessfully_guessed = False
     wrong_guess = 0
@@ -122,14 +119,14 @@ def run_game():
                 guessed_letters.append(guessed_letter)
                 total_attempt_counter -= 1
                 wrong_guess += 1
-                hangman_pic(wrong_guess)
+                hangman_status(wrong_guess)
                 print()
             elif guessed_letter in word:
                 print_lines()
                 print(Fore.GREEN + 'Super that letter is in the word')
                 print()
                 guessed_letters.append(guessed_letter)
-                hangman_pic(wrong_guess)
+                hangman_status(wrong_guess)
                 print()
         else:
             if len(guessed_letter) != 1:
