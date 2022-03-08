@@ -2,23 +2,66 @@
 
 ## Overview
 
-[Horse Hangman Deployed Site Link](https://horse-hangman.herokuapp.com/) is a python terminal game that runs on Heroku.
-
-<div><center><h2>
-Site Mockup
-</h2></center></div>
-
-<img src=images/Mockup.JPG>
+[Horse Hangman](https://horse-hangman.herokuapp.com/) is a python terminal game that runs on Heroku.
 
 ### How to Play
 The game is based on the traditional Hangman word guessing game, the only difference is that all the words for this game are related to horses. The game starts with asking for the user to enter their name before asking the user to input a letter. The user has six lives (attempts) and if a letter is guessed wrong the user looses a life and the hangman picture starts to build, as the user looses lives the colour of the Hangman picture updates from Green to Yellow and then to the Red danger zone. On completion of the game the user has the option to 'Play Again' or exit the game.
 
-### Flowchart
+
+<div><h2>
+Site Mockup
+</h2></div>
+
+<img src=images/Mockup.JPG>
+
+
+## Flowchart
 
 <img src=images/flowchart.JPG>
 
 
 ## Features 
+
+- Welcome Greeting for user
+- Prompt for user to enter their Name
+
+<img src=images/welcome_msg.jpg>
+
+- Loading of the game rules
+- Prompt for user to enter a Letter
+
+<img src=images/load_rules.jpg>
+
+
+- Hangman Picture & correctly guessed letters display after user submits a guess
+
+if correct letter:
+
+<img src=images/letter_guess_correct.jpg>
+
+if incorrect letter:
+
+<img src=images/letter_guess_wrong.jpg>
+
+
+- Winner message displays if user corectly guesses the word
+
+<img src=images/win.jpg>
+
+- Loser message displays if user incorrectly guesses the word
+
+<img src=images/loser.JPG>
+
+- Play again option is presented on completion of the game
+
+if No:
+
+<img src=images/play_again_n.JPG>
+
+if Yes:
+
+<img src=images/play_again_y.JPG>
+
 
 
 ### Features Left to Implement
