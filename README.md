@@ -4,14 +4,20 @@
 
 [Horse Hangman Deployed Site Link](https://horse-hangman.herokuapp.com/) is a python terminal game that runs on Heroku.
 
-### How to Play
-The game is based on the traditional Hangman word guessing game, the only difference is that all the words for this game are related to horses. The user has six lives (attempts) they must guess a letter and if wrong the user looses a life and the hangman picture starts to build, on completion of the game the user has the option to 'Play Again'.
-
 <div><center><h2>
 Site Mockup
 </h2></center></div>
 
 <img src=images/Mockup.JPG>
+
+### How to Play
+The game is based on the traditional Hangman word guessing game, the only difference is that all the words for this game are related to horses. The user has six lives (attempts) they must guess a letter and if wrong the user looses a life and the hangman picture starts to build, on completion of the game the user has the option to 'Play Again'.
+
+### Flowchart
+
+<img src=images/flowchart.JPG>
+
+
 
 ## Features 
 
@@ -93,7 +99,11 @@ Python Code inspired and adapted from the following tutorials and sources:
 
 - https://note.nkmk.me/en/python-textwrap-wrap-fill-shorten/
 
-And of course the Code Institute Javascript online module & challenges/ Love Sandwiches
+- And of course the Code Institute Python online module & challenges/ Love Sandwiches
+
+Flowchart created in:
+
+- https://app.diagrams.net/
 
 
 ### Content
