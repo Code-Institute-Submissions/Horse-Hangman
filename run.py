@@ -101,7 +101,7 @@ def run_game():
         print()
         print(Fore.BLUE + 'You have ' + str(total_attempt_counter) + ' \
  guess attempts...')
-        guessed_letter = input(Fore.BLUE + 'Guess a letter: \n').lower()
+        guessed_letter = input(Fore.YELLOW + 'Guess a letter: \n').lower()
         # user inputs a letter
         if len(guessed_letter) == 1:
             if guessed_letter not in ALPHABETS:
