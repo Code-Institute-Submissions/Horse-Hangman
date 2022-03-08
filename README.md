@@ -22,6 +22,11 @@ The game is based on the traditional Hangman word guessing game, the only differ
 
 
 ### Features Left to Implement
+
+- User Score Board
+- Improve Game display
+- Add logo/ improve art work
+- Add multiple game levels e.g Easy, Moderate, Hard
        
 
 ## Languages Used
@@ -53,7 +58,7 @@ Test Scripts actioned:
 - Enter a valid name 
 - Test passed 
 
-2. Test that greeting message loads as expected and User is asked to re-inout their name if invalid data is entered:
+2. Test that greeting message loads as expected and User is asked to re-input their name if invalid data is entered:
 
 - Navigate to Heroku deployed link
 - Check greeting loads as expected
@@ -65,6 +70,7 @@ The conclusion of repeating the above test scripts multiple times was that:
 
 - The game itself was understandable and easy to follow.
 - The random select word logic is working as expected.
+- The game handles invalid data entry correctly.
 - The guess counters are being incremented correcly.
 - The game only actions the play again function once all guess attempts or when the word has been guessed corectly.
 - answered.
@@ -92,6 +98,22 @@ I reviewed all content on the site for:
 I ran all the Python Code through [PEP8](http://pep8online.com/)
 
 No errors detected
+
+### run.py:
+<img src=images/run.JPG>
+
+### words.py:
+<img src=images/Words.jpg>
+
+### hangman_pics.py:
+<img src=images/Hangman_pic.jpg>
+
+
+## Lighthouse
+
+Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on Desktop.
+
+<img src=images/lighthouse.JPG>
 
 ## Credits
 
