@@ -48,6 +48,7 @@ def show_greeting_and_take_username():
     """
     print_lines()
     print(Fore.YELLOW + "Welcome to Horse Hangman")
+    print(Fore.YELLOW + "Guess the word before the man is hung and you win!")
     print_lines()
     name = take_username_input()
     print_lines()

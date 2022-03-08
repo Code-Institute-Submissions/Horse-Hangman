@@ -35,18 +35,21 @@ def hangman_pic(wrong):
         print(Fore.YELLOW + "    |")
         print(Fore.YELLOW + "   ===")
     elif wrong == 4:
+        print(Fore.RED + "DANGER ZONE")
         print(Fore.RED + "\n+---+")
         print(Fore.RED + " O  |")
         print(Fore.RED + "/|\ |")
         print(Fore.RED + "    |")
         print(Fore.RED + "   ===")
     elif wrong == 5:
+        print(Fore.RED + "DANGER ZONE")
         print(Fore.RED + "\n+---+")
         print(Fore.RED + " O  |")
         print(Fore.RED + "/|\ |")
         print(Fore.RED + "/   |")
         print(Fore.RED + "   ===")
     elif wrong == 6:
+        print(Fore.RED + "DANGER ZONE")
         print(Fore.RED + "\n+---+")
         print(Fore.RED + " O   |")
         print(Fore.RED + "/|\  |")
