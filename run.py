@@ -5,7 +5,7 @@ import time
 import os
 from colorama import Fore, init
 from constants import hangman_status, TOTAL_ATTEMPTS, ALPHABETS
-from words import select_word
+from words import select_random_word
 
 init(autoreset=True)
 
@@ -87,7 +87,7 @@ def run_game():
     Define the main function that runs the game
     """
     # Set guess word to get_word function for a random word to be generated
-    word = select_word()
+    word = select_random_word()
     # Initiate an empty list for guessed letter
     guessed_letters = []
     # Initiate a counter for number of tries by the user
@@ -100,8 +100,11 @@ def run_game():
     # Deduct attempts each user fails to guess incorrectly
     while sucessfully_guessed is not True and total_attempt_counter > 0:
         print()
+        print(f"{Fore.GREEN}Your word contains {len(word)} letters")
+        print()
         print(Fore.BLUE + 'You have ' + str(total_attempt_counter) + ' \
- guess attempts...')
+guess attempts...')
+        print()
         guessed_letter = input(Fore.YELLOW + 'Guess a letter: \n').lower()
         # user inputs a letter
         if len(guessed_letter) == 1:

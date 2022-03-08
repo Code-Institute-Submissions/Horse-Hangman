@@ -5,7 +5,7 @@ Hangman game ascii artwork
 from colorama import Fore, init
 init(autoreset=True)
 
-# Set limit of user attempts to guess 
+# Set limit of user attempts to guess
 TOTAL_ATTEMPTS = 6
 
 # Set alphabet as constant
