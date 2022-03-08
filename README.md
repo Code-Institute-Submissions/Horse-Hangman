@@ -262,6 +262,7 @@ The conclusion of repeating the above test scripts multiple times was that:
 - In initial testing the user could run through the game to the end without input by hitting the Return key, I fixed this by updating the else statment in the run game method to catch and invalidate this action.
 - In initial testing the user could enter multiple letters without any feedback/ error, I fixed this by updating the else statment in the run game method to catch and invalidate this action. 
 - In the play again function it asks for Y/N, however initially if the user selected any key or hit enter the terminal would either go blank or the end message would appear. I fixed this by updating the else statment to clear the terminal and load the game.
+- All known bugs have been fixed
 
 
 ### Content 
