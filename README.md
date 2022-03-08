@@ -11,17 +11,11 @@ The game is based on the traditional Hangman word guessing game, the only differ
 Site Mockup
 </h2></center></div>
 
-<img src=>
+<img src=images/Mockup.JPG>
 
 ## Features 
 
-### The About Section
 
-#### Contains:
-
-
-
- 
 ### Features Left to Implement
        
 
@@ -63,6 +57,7 @@ The conclusion of repeating the above test scripts multiple times was that:
 - Hangman pic build backwards
 - Return key
 - multiple letters entered
+- play again - any letter will exit the game 
 
 ### Content 
 
@@ -76,15 +71,14 @@ I reviewed all content on the site for:
 
 ### Validation
 
-I ran the Python Code through [PEP8](http://pep8online.com/)
+I ran all the Python Code through [PEP8](http://pep8online.com/)
 
 No errors detected
 
 ## Credits
 
-### Python:
+Python Code inspired and adapted from the following tutorials and sources:
 
-Code inspired and adapted from the following tutorials and sources:
 - https://www.pythonforbeginners.com/code-snippets-source-code/game-hangman
 
 - https://inventwithpython.com/invent4thed/chapter8.html
@@ -96,6 +90,8 @@ Code inspired and adapted from the following tutorials and sources:
 - https://www.mikedane.com/programming-languages/python/guessing-game/
 
 - https://www.numpyninja.com/post/how-to-format-strings-using-print-in-python
+
+- https://note.nkmk.me/en/python-textwrap-wrap-fill-shorten/
 
 And of course the Code Institute Javascript online module & challenges/ Love Sandwiches
 
@@ -110,18 +106,34 @@ All content was written by the project owner.
 - I used the 
 [Markdown cheat sheet](https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md) and the [love running template ](https://github.com/Code-Institute-Solutions/readme-template )to help put together my readme.
 
-## Acknowledgments
+### Acknowledgments
 
 I would like to thank my mentor Akshat Garg for his guidence.
 
+
 # Deployment
 
-The site was deployed via GitHub pages to Heroku. 
+The site was deployed to Heroku. 
 
 The steps to deploy are as follows: 
-  - I created a new Github repository to host all my python code before creating a new Heroku application, in Heroku I set the buildbacks to Python and Node.js, added the 8000 port in the config vars and then linked the Github repository before manually deploying. Once manual deployment was sucessful I enabled automatic deployments so all changes in my Github repository were pushed automatically to Heroku.
 
-  - On submission the project it is forked, by forking the project a copy of the original repository is made that can be viewed without affecting the original repository by following these steps: In the GitHub repository, locate the settings, above this is the option to 'fork', select this to create a copy
+- Log in to Heroku or create an account
+- On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
+- You must enter a unique app name
+- Next select your region
+- Click on the Create App button
+- The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+- Click Reveal Config Vars and enter port into the Key box and 8000 into the Value box and click the Add button
+- Scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
+- Repeat step 8 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order
+- Go to the top of the page and choose the Deploy tab
+- Select Github as the deployment method
+- Confirm you want to connect to GitHub
+- Search for the repository name and click the connect button
+- Scroll to the bottom of the deploy page and select the preferred deployment type
+- Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+
+  - On submission the project is forked in Github, by forking the project a copy of the original repository is made that can be viewed without affecting the original repository by following these steps: In the GitHub repository, locate the settings, above this is the option to 'fork', select this to create a copy
 
   - Cloning a repository: When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations. It makes it easier to fix merge conflicts, add or remove files, and push larger commits. 
 
