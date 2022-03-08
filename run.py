@@ -50,7 +50,7 @@ def show_greeting_and_take_username():
     print_lines()
     name = take_username_input()
     print_lines()
-    print(Fore.YELLOW + "Hello & welcome" + " " + name + " ")
+    print(Fore.YELLOW + "Hello & welcome" + " " + name + " " + "Good Luck :)")
     print_with_sleep(Fore.YELLOW + "Please wait for the rules to load.....", 1)
     print()
     print_with_sleep(Fore.CYAN + "The objective of the game is to guess\
