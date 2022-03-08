@@ -62,6 +62,23 @@ if Yes:
 
 <img src=images/play_again_y.JPG>
 
+- Input validation is implemented for when the user enters invalid data, only alpha characters are accepted as valid
+
+Input name:
+
+<img src=images/invalid_name.JPG>
+
+Input a number/ special character:
+
+<img src=images/entered_number.jpg>
+
+Input multiple letters/numbers:
+
+<img src=images/enter_multiple_text.jpg>
+
+Enter return instead of a letter:
+
+<img src=images/entered_return.jpg>
 
 
 ### Features Left to Implement
