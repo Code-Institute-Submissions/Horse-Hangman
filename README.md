@@ -46,7 +46,20 @@ I tested the game rules logic was working as expected.
 
 Test Scripts actioned:
 
-1. 
+1. Test that greeting message loads as expected and User can input a valid name:
+
+- Navigate to Heroku deployed link
+- Check greeting loads as expected
+- Enter a valid name 
+- Test passed 
+
+2. Test that greeting message loads as expected and User is asked to re-inout their name if invalid data is entered:
+
+- Navigate to Heroku deployed link
+- Check greeting loads as expected
+- Enter an invalid name containing special characters/ numbers
+- User is presented with message stating name is invalid please enter a valid name
+- Test passed 
 
 The conclusion of repeating the above test scripts multiple times was that:
 
