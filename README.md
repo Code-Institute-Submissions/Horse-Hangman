@@ -11,12 +11,11 @@ Site Mockup
 <img src=images/Mockup.JPG>
 
 ### How to Play
-The game is based on the traditional Hangman word guessing game, the only difference is that all the words for this game are related to horses. The user has six lives (attempts) they must guess a letter and if wrong the user looses a life and the hangman picture starts to build, on completion of the game the user has the option to 'Play Again'.
+The game is based on the traditional Hangman word guessing game, the only difference is that all the words for this game are related to horses. The game starts with asking for the user to enter their name before asking the user to input a letter. The user has six lives (attempts) and if a letter is guessed wrong the user looses a life and the hangman picture starts to build, as the user looses lives the colour of the Hangman picture updates from Green to Yellow and then to the Red danger zone. On completion of the game the user has the option to 'Play Again' or exit the game.
 
 ### Flowchart
 
 <img src=images/flowchart.JPG>
-
 
 
 ## Features 

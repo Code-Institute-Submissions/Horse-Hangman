@@ -57,7 +57,7 @@ def show_greeting_and_take_username():
     print()
     print_with_sleep(Fore.CYAN + "The objective of the game is to guess\
  the secret word one letter at a time", 1)
-    print_with_sleep(Fore.BLUE + "Hint: All words are Equine related.", 1)
+    print_with_sleep(Fore.BLUE + "Hint: All words are Horse related.", 1)
     print_with_sleep(Fore.CYAN + "Don't forget to press \
  'enter key' after each guess", 1)
     print()
