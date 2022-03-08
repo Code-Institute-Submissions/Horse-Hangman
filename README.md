@@ -19,6 +19,26 @@ Site Mockup
 
 <img src=images/flowchart.JPG>
 
+## User Experience
+
+Goals:
+
+- Provide a fun interactive experience
+- Provide a great user experience.
+- Be easy to navigate
+- Give clear calls to action
+- Function in a logical correct way
+
+First Time User:
+
+- I want to be able to navigate the game terminal and understand its objectives clearly without confusion.
+- I want to clearly understand how to complete the game
+
+Returning/ Regular Visitor: 
+
+- I would like to see more game options/ levels.
+- I would like to see the game updated & refreshed monthly with new challenges.
+
 
 ## Features 
 
@@ -92,6 +112,14 @@ Enter return instead of a letter:
 ## Languages Used
 - Python
 
+Python Packages:
+
+- Random: returns a random integer to get a random word
+- Colorama: allows terminal text to be printed in different colours / styles
+- Time: defined time sleep
+- OS: modules provide numerous tools to deal with filenames, paths, directories
+
+
 
 ## Frameworks, Libaries and technologies used
 
@@ -124,7 +152,41 @@ Test Scripts actioned:
 - Check greeting loads as expected
 - Enter an invalid name containing special characters/ numbers
 - User is presented with message stating name is invalid please enter a valid name
-- Test passed 
+- Test passed
+
+3. Test that the user name is loaded and the rules display with the time delay
+
+4. Test that the User can enter a letter and return a result
+
+- Navigate to Heroku deployed link
+- Check greeting loads as expected
+- Enter a valid name 
+- Enter a letter 
+- Input accepted 
+- Test passed
+
+5. Test that the User cannot continue the game if they do not enter a valid input
+
+- Navigate to Heroku deployed link
+- Check greeting loads as expected
+- Enter a valid name 
+- Enter a number 
+- Error message displays asking user to enter a letter 
+- Enter a special character
+- Error message displays asking user to enter a letter 
+- Enter multiple letters/ numbers combination
+- Error message displays asking user to enter a letter
+- Hit the return button
+- Error message displays asking user to enter a letter
+- All input validation Tests passed
+
+6. Test that the hangman picture builds correctly
+7. Test that the correctly guessed letters display correctly 
+8. Test that the attempt counter decreases correctly
+9. Test that the option to play again works as expected
+10. Test that the secret word is being randomly selected
+11. Test that the colours are displaying as expected
+
 
 The conclusion of repeating the above test scripts multiple times was that:
 
