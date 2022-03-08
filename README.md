@@ -180,12 +180,13 @@ Test Scripts actioned:
 - Error message displays asking user to enter a letter
 - All input validation Tests passed
 
-6. Test that the hangman picture builds correctly
-7. Test that the correctly guessed letters display correctly 
-8. Test that the attempt counter decreases correctly
-9. Test that the option to play again works as expected
-10. Test that the secret word is being randomly selected
-11. Test that the colours are displaying as expected
+6. Test that when the user enters the same letter twice they are prompted to enter a new letter
+7. Test that the hangman picture builds correctly
+8. Test that the correctly guessed letters display correctly 
+9. Test that the attempt counter decreases correctly
+10. Test that the option to play again works as expected
+11. Test that the secret word is being randomly selected
+12. Test that the colours are displaying as expected
 
 
 
