@@ -1,8 +1,10 @@
 # Horse Hangman
 
+
 ## Overview
 
 [Horse Hangman](https://horse-hangman.herokuapp.com/) is a python terminal game that runs on Heroku.
+
 
 ### How to Play
 The game is based on the traditional Hangman word guessing game, the only difference is that all the words for this game are related to horses. The game starts with asking for the user to enter their name before asking the user to input a letter. The user has six lives (attempts) and if a letter is guessed wrong the user looses a life and the hangman picture starts to build, as the user looses lives the colour of the Hangman picture updates from Green to Yellow and then to the Red danger zone. On completion of the game the user has the option to 'Play Again' or exit the game.
@@ -12,12 +14,15 @@ The game is based on the traditional Hangman word guessing game, the only differ
 Site Mockup
 </h2></div>
 
+
 <img src=images/Mockup.JPG>
 
 
 ## Flowchart
 
+
 <img src=images/flowchart.JPG>
+
 
 ## User Experience
 
@@ -120,7 +125,6 @@ Python Packages:
 - OS: modules provide numerous tools to deal with filenames, paths, directories
 
 
-
 ## Frameworks, Libaries and technologies used
 
 - [Git/ Github](https://github.com/) - Git/Github was used for version control, storage and deployment of the project.
@@ -141,53 +145,98 @@ Test Scripts actioned:
 
 1. Test that greeting message loads as expected and User can input a valid name:
 
-- Navigate to Heroku deployed link
-- Check greeting loads as expected
-- Enter a valid name 
-- Test passed 
+  - Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter a valid name 
+  - Test passed 
 
 2. Test that greeting message loads as expected and User is asked to re-input their name if invalid data is entered:
 
-- Navigate to Heroku deployed link
-- Check greeting loads as expected
-- Enter an invalid name containing special characters/ numbers
-- User is presented with message stating name is invalid please enter a valid name
-- Test passed
+  - Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter an invalid name containing special characters/ numbers
+  - User is presented with message stating name is invalid please enter a valid name
+  - Test passed
 
 3. Test that the user name is loaded and the rules display with the time delay
 
 4. Test that the User can enter a letter and return a result
 
-- Navigate to Heroku deployed link
-- Check greeting loads as expected
-- Enter a valid name 
-- Enter a letter 
-- Input accepted 
-- Test passed
+  - Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter a valid name 
+  - Enter a letter 
+  - Input accepted 
+  - Test passed
 
 5. Test that the User cannot continue the game if they do not enter a valid input
 
-- Navigate to Heroku deployed link
-- Check greeting loads as expected
-- Enter a valid name 
-- Enter a number 
-- Error message displays asking user to enter a letter 
-- Enter a special character
-- Error message displays asking user to enter a letter 
-- Enter multiple letters/ numbers combination
-- Error message displays asking user to enter a letter
-- Hit the return button
-- Error message displays asking user to enter a letter
-- All input validation Tests passed
+  - Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter a valid name 
+  - Enter a number 
+  - Error message displays asking user to enter a letter 
+  - Enter a special character
+  - Error message displays asking user to enter a letter 
+  - Enter multiple letters/ numbers combination
+  - Error message displays asking user to enter a letter
+  - Hit the return button
+  - Error message displays asking user to enter a letter
+  - All input validation Tests passed
 
 6. Test that when the user enters the same letter twice they are prompted to enter a new letter
+
+  - Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter a valid name 
+  - Enter a letter
+  - Enter the same letter again
+  - Confirm that the print message informs the user they have already guessed that letter and to enter another
+  - Test Passed
+
 7. Test that the hangman picture builds correctly
+
+  - Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter a valid name 
+  - Enter a letter
+  - Continue playing the game monitoring that the hangman picture is populated as the guesses are incorrect
+  - Test Passed
+
 8. Test that the correctly guessed letters display correctly 
+
+  - Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter a valid name 
+  - Enter a letter
+  - Continue playing the game monitoring that the guessed letters are populated under the hangman picture in the correct order
+  - Test Passed
+
 9. Test that the attempt counter decreases correctly
+  - Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter a valid name 
+  - Enter a letter
+  - Continue playing the game monitoring that the guess attempts are decreasing with each incorrect guess 
+  - Test Passed
+
 10. Test that the option to play again works as expected
+  - Navigate to Heroku deployed link
+  - Check greeting loads as expected
+  - Enter a valid name 
+  - Enter a letter
+  - Continue playing the game until the play again method is displayed
+  - Run this test multiple times selecting Y/N and other characters
+  - Test Passed
+
 11. Test that the secret word is being randomly selected
+  - Play the game multiple times consecutively taking note of the random word being supplied
+  - All Tests Passed, word is random
+
 12. Test that the colours are displaying as expected
 
+  - Play the game multiple times consecutively taking note of the colurs being generated in the terminal and compare to the code base 
+  -  Test Passed
 
 
 The conclusion of repeating the above test scripts multiple times was that:
@@ -205,7 +254,8 @@ The conclusion of repeating the above test scripts multiple times was that:
 - In my initial testing the Hangman picture was building backwards, I fixed this by updating the code with a wrong_guess counter 
 - In initial testing the user could run through the game to the end without input by hitting the Return key, I fixed this by updating the else statment in the run game method to catch and invalidate this action.
 - In initial testing the user could enter multiple letters without any feedback/ error, I fixed this by updating the else statment in the run game method to catch and invalidate this action. 
-- In the play again function it initially asked for Y/N howwever selecting any key other than Y will exit the game.
+- In the play again function it asks for Y/N, however initially if the user selected any key or hit enter the terminal would either go blank or the end message would appear. I fixed this by updating the else statment to clear the terminal and load the game.
+
 
 ### Content 
 
@@ -214,7 +264,6 @@ I reviewed all content on the site for:
 - Hangman pictures are placed properly with proper sizes & displaying as expected
 - Instructions are clear and contain correct information
 - Verified all text/ headings are displaying correctly
-
 
 
 ### Validation
@@ -239,6 +288,7 @@ Lighthouse was used to test Performance, Best Practices, Accessibility and SEO o
 
 <img src=images/lighthouse.JPG>
 
+
 ## Credits
 
 Python Code inspired and adapted from the following tutorials and sources:
@@ -257,6 +307,8 @@ Python Code inspired and adapted from the following tutorials and sources:
 
 - https://note.nkmk.me/en/python-textwrap-wrap-fill-shorten/
 
+- https://www.sololearn.com/Discuss/1582033/how-to-check-if-input-is-empty-in-python
+
 - And of course the Code Institute Python online module & challenges/ Love Sandwiches
 
 Flowchart created in:
@@ -273,6 +325,7 @@ All content was written by the project owner.
 
 - I used the 
 [Markdown cheat sheet](https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md) and the [love running template ](https://github.com/Code-Institute-Solutions/readme-template )to help put together my readme.
+
 
 ### Acknowledgments
 
