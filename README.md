@@ -113,6 +113,7 @@ Enter return instead of a letter:
 - Add logo/ improve art work
 - Add multiple game levels e.g Easy, Moderate, Hard
 - Improve formatting of the game in the terminal display
+- Use a library to store the random words
        
 
 ## Languages Used

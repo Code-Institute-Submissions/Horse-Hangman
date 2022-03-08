@@ -12,7 +12,21 @@ def select_random_word():
         "Saddle",
         "Bridle",
         "Girth",
-        "Mare"
+        "Mare",
+        "Croup",
+        "Filly",
+        "Colt",
+        "Stable",
+        "Straw",
+        "Hay",
+        "Blaze",
+        "Colic",
+        "Jump",
+        "Mane",
+        "Tail",
+        "Hock",
+        "Whip",
+        "Rider"
     ]
 
     random_word = random.choice(words)
