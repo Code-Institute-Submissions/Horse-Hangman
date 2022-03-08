@@ -10,6 +10,7 @@ from words import select_word
 init(autoreset=True)
 
 
+# Prints a separator line
 def print_lines():
     """
     Function to print the lines for the formatting
@@ -71,13 +72,13 @@ def play_again():
     # Create a decision making process
     if response == 'y':
         run_game()
-    else:
+    elif response == 'n':
         os.system("clear")
         print("")
         print_lines()
         print(Fore.CYAN + "Hope you enjoyed the game, See you next time :)")
         print_lines()
-
+    
 
 def run_game():
     """
